@@ -159,19 +159,19 @@
 };
 
 &mdio {
-	ethphy4: ethernet-phy@4 {
-		reg = <4>;
+	ethphy4: ethernet-phy@0 {
+		reg = <0>;
 	};
 };
 
 &switch0 {
 	ports {
-		port@0 {
+		port@4 {
 			status = "okay";
 			label = "lan4";
 		};
 
-		port@1 {
+		port@3 {
 			status = "okay";
 			label = "lan3";
 		};
@@ -181,7 +181,7 @@
 			label = "lan2";
 		};
 
-		port@3 {
+		port@1 {
 			status = "okay";
 			label = "lan1";
 		};
