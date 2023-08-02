@@ -7,7 +7,7 @@
 
 / {
 	compatible = "raisecom,msg1500-x-00", "mediatek,mt7621-soc";
-	model = "Mercurye KM08-708HV0001";
+	model = "MERCURY KM08-708H";
 
 	aliases {
 		led-boot = &led_usb;
