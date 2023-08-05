@@ -173,9 +173,9 @@
 +CONFIG_CMD_NAND_TRIMFFS=y
 +CONFIG_LMB_MAX_REGIONS=64
 +CONFIG_USE_IPADDR=y
-+CONFIG_IPADDR="192.168.1.1"
++CONFIG_IPADDR="192.168.10.1"
 +CONFIG_USE_SERVERIP=y
-+CONFIG_SERVERIP="192.168.1.254"
++CONFIG_SERVERIP="192.168.10.254"
 --- /dev/null
 +++ b/arch/arm/dts/mt7981_qihoo-360t7.dts
 @@ -0,0 +1,185 @@
@@ -367,8 +367,8 @@
 --- /dev/null
 +++ b/qihoo-360t7_env
 @@ -0,0 +1,56 @@
-+ipaddr=192.168.1.1
-+serverip=192.168.1.254
++ipaddr=192.168.10.1
++serverip=192.168.10.254
 +loadaddr=0x46000000
 +console=earlycon=uart8250,mmio32,0x11002000 console=ttyS0
 +bootcmd=if pstore check ; then run boot_recovery ; else run boot_ubi ; fi
