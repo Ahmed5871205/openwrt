@@ -180,9 +180,9 @@
 +CONFIG_CMD_NAND_TRIMFFS=y
 +CONFIG_LMB_MAX_REGIONS=64
 +CONFIG_USE_IPADDR=y
-+CONFIG_IPADDR="192.168.1.1"
++CONFIG_IPADDR="192.168.10.1"
 +CONFIG_USE_SERVERIP=y
-+CONFIG_SERVERIP="192.168.1.254"
++CONFIG_SERVERIP="192.168.10.254"
 --- /dev/null
 +++ b/configs/mt7986_tplink_tl-xdr6086_defconfig
 @@ -0,0 +1,182 @@
@@ -365,9 +365,9 @@
 +CONFIG_CMD_NAND_TRIMFFS=y
 +CONFIG_LMB_MAX_REGIONS=64
 +CONFIG_USE_IPADDR=y
-+CONFIG_IPADDR="192.168.1.1"
++CONFIG_IPADDR="192.168.10.1"
 +CONFIG_USE_SERVERIP=y
-+CONFIG_SERVERIP="192.168.1.254"
++CONFIG_SERVERIP="192.168.10.254"
 --- /dev/null
 +++ b/configs/mt7986_tplink_tl-xdr6088_defconfig
 @@ -0,0 +1,182 @@
@@ -550,9 +550,9 @@
 +CONFIG_CMD_NAND_TRIMFFS=y
 +CONFIG_LMB_MAX_REGIONS=64
 +CONFIG_USE_IPADDR=y
-+CONFIG_IPADDR="192.168.1.1"
++CONFIG_IPADDR="192.168.10.1"
 +CONFIG_USE_SERVERIP=y
-+CONFIG_SERVERIP="192.168.1.254"
++CONFIG_SERVERIP="192.168.10.254"
 --- /dev/null
 +++ b/arch/arm/dts/mt7986a-tplink-tl-xdr608x.dts
 @@ -0,0 +1,196 @@
@@ -756,8 +756,8 @@
 +++ b/tplink_tl-xdr4288_env
 @@ -0,0 +1,57 @@
 +ethaddr_factory=mtd read config 0x40080000 0x0 0x20000 && env readmem -b ethaddr 0x4008001c 0x6 ; setenv ethaddr_factory
-+ipaddr=192.168.1.1
-+serverip=192.168.1.254
++ipaddr=192.168.10.1
++serverip=192.168.10.254
 +loadaddr=0x46000000
 +console=earlycon=uart8250,mmio32,0x11002000 console=ttyS0
 +bootcmd=if pstore check ; then run boot_recovery ; else run boot_ubi ; fi
@@ -816,8 +816,8 @@
 +++ b/tplink_tl-xdr6086_env
 @@ -0,0 +1,57 @@
 +ethaddr_factory=mtd read config 0x40080000 0x0 0x20000 && env readmem -b ethaddr 0x4008001c 0x6 ; setenv ethaddr_factory
-+ipaddr=192.168.1.1
-+serverip=192.168.1.254
++ipaddr=192.168.10.1
++serverip=192.168.10.254
 +loadaddr=0x46000000
 +console=earlycon=uart8250,mmio32,0x11002000 console=ttyS0
 +bootcmd=if pstore check ; then run boot_recovery ; else run boot_ubi ; fi
@@ -876,8 +876,8 @@
 +++ b/tplink_tl-xdr6088_env
 @@ -0,0 +1,57 @@
 +ethaddr_factory=mtd read config 0x40080000 0x0 0x20000 && env readmem -b ethaddr 0x4008001c 0x6 ; setenv ethaddr_factory
-+ipaddr=192.168.1.1
-+serverip=192.168.1.254
++ipaddr=192.168.10.1
++serverip=192.168.10.254
 +loadaddr=0x46000000
 +console=earlycon=uart8250,mmio32,0x11002000 console=ttyS0
 +bootcmd=if pstore check ; then run boot_recovery ; else run boot_ubi ; fi
