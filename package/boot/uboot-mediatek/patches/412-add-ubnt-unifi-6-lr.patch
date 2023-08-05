@@ -145,9 +145,9 @@
 +CONFIG_SPI_FLASH_USE_4K_SECTORS=y
 +CONFIG_SYS_HAS_NONCACHED_MEMORY=y
 +CONFIG_USE_IPADDR=y
-+CONFIG_IPADDR="192.168.1.1"
++CONFIG_IPADDR="192.168.10.1"
 +CONFIG_USE_SERVERIP=y
-+CONFIG_SERVERIP="192.168.1.254"
++CONFIG_SERVERIP="192.168.10.254"
 --- /dev/null
 +++ b/arch/arm/dts/mt7622-ubnt-unifi-6-lr.dts
 @@ -0,0 +1,193 @@
@@ -358,8 +358,8 @@
 +++ b/ubnt_unifi-6-lr_env
 @@ -0,0 +1,50 @@
 +ethaddr_factory=mtd read nor0 $loadaddr 0x110000 0x10000 && env readmem -b ethaddr $loadaddr 0x6 ; setenv ethaddr_factory
-+ipaddr=192.168.1.1
-+serverip=192.168.1.254
++ipaddr=192.168.10.1
++serverip=192.168.10.254
 +loadaddr=0x48000000
 +bootcmd=if pstore check ; then run boot_recovery ; else run boot_nor ; fi
 +bootdelay=0
