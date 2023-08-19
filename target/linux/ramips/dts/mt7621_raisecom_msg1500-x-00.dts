@@ -7,7 +7,7 @@
 
 / {
 	compatible = "raisecom,msg1500-x-00", "mediatek,mt7621-soc";
-	model = "MERCURY KM06-704H";
+	model = "MERCURY KM06-704H-JM";
 
 	aliases {
 		led-boot = &led_usb;
@@ -27,7 +27,7 @@
 
 		wlan5g {
 			label = "blue:wlan5g";
-			gpios = <&gpio 15 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio 13 GPIO_ACTIVE_LOW>;
 			linux,default-trigger = "phy1radio";
 		};
 
