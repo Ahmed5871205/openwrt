@@ -25,7 +25,7 @@
 		gpio_ext_lna0 {
 			gpio-export,name = "tp-link:ext:lna0";
 			gpio-export,output = <1>;
-			gpios = <&gpio 18 GPIO_ACTIVE_HIGH>;
+			gpios = <&gpio 12 GPIO_ACTIVE_HIGH>;
 		};
 
 		gpio_ext_lna1 {
@@ -46,7 +46,7 @@
 
 	usb2 {
 		label = "green:usb2";
-		gpios = <&gpio 12 GPIO_ACTIVE_LOW>;
+		gpios = <&gpio 18 GPIO_ACTIVE_LOW>;
 		trigger-sources = <&hub_port2>;
 		linux,default-trigger = "usbport";
 	};
@@ -88,7 +88,7 @@
 
 		qca,ar8327-initvals = <
 			0x04 0x07600000 /* PORT0 PAD MODE CTRL */
-			0x10 0x80000080 /* POWER_ON_STRAP */
+			0x10 0x81000080 /* POWER_ON_STRAP */
 			0x50 0xc737c737 /* LED_CTRL0 */
 			0x54 0x00000000 /* LED_CTRL1 */
 			0x58 0x00000000 /* LED_CTRL2 */
